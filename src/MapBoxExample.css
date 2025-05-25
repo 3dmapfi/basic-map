@@ -1,0 +1,126 @@
+.search-form {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  transform: none;
+  z-index: 10;
+  background: #fff;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  min-width: 340px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(8px);
+}
+.search-input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #0984e3;
+  background: #fff;
+  color: #23244a;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(125, 249, 255, 0.08);
+  transition: border 0.2s, box-shadow 0.2s;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+}
+.search-input::selection {
+  background: #0984e3;
+  color: #fff;
+}
+.suggestions-list {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1.5px solid #0984e3;
+  border-radius: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 20;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 4px 16px rgba(125, 249, 255, 0.15);
+  backdrop-filter: blur(6px);
+}
+.suggestion-item {
+  width: "100%";
+  text-align: "left";
+  background: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(125, 249, 255, 0.08);
+  color: #23244a;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background 0.15s, color 0.15s;
+}
+.suggestion-item:hover {
+  border: none;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.06);
+}
+.search-button {
+  background: linear-gradient(140deg, #0984e3 0%, #00b894 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  margin-left: 8px;
+  box-shadow: 0 2px 8px rgba(125, 249, 255, 0.18);
+  cursor: pointer;
+  letter-spacing: 1.1px;
+  transition: background 0.2s, color 0.2s;
+}
+.logo-corner {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  width: 28px;
+  height: 28px;
+  z-index: 20;
+}
+
+.logo-corner.logo-bottom-right {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  top: auto;
+  left: auto;
+  width: 28px;
+  height: 28px;
+  z-index: 20;
+}
+
+/* Remove map-controls-container and map-control-btn styles if not used */
+.map-controls-container,
+.map-control-btn {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .search-form {
+    top: 8px;
+    left: 8px;
+    min-width: 120px;
+    max-width: 180px;
+    padding: 8px;
+  }
+  .logo-corner.logo-bottom-right {
+    width: 18px;
+    height: 18px;
+    bottom: 8px;
+    right: 8px;
+  }
+}
